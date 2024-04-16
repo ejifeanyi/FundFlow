@@ -16,9 +16,9 @@ const ModalTrigger = () => {
 	return (
 		<Sheet>
 			<SheetTrigger asChild>
-				<button className="bg-primary text-sm text-primary-foreground rounded-lg px-4 py-3">
+				<Button className="bg-primary text-sm text-primary-foreground rounded-lg px-4 py-3">
 					Create board
-				</button>
+				</Button>
 			</SheetTrigger>
 			<SheetContent>
 				<SheetHeader>
@@ -29,20 +29,30 @@ const ModalTrigger = () => {
 				</SheetHeader>
 				<div className="grid gap-4 py-4">
 					<div className="grid grid-cols-4 items-center">
-						<Input id="name" value="Personal project" className="col-span-4" />
+						<Input
+							id="name"
+							value="Personal project"
+							className="col-span-4 rounded-lg"
+						/>
 					</div>
 					<div className="mt-5">
-						<h1 className="font-bold text-2xl">Now, let's start budgeting!</h1>
+						<h1 className="font-bold text-2xl">
+							Now, let&apos;s start budgeting!
+						</h1>
 					</div>
 				</div>
 				<SheetFooter>
 					<SheetClose asChild>
 						<>
 							<p className="mt-6 text-muted-foreground text-sm ">
-								We'll create a board for you to start budgeting. You'll be able
-								to add unlimited lists, cards, and get insights using AI!
+								We&apos;ll create a board for you to start budgeting.
+								You&apos;ll be able to add unlimited lists, cards, and get
+								insights using AI!
 							</p>
-							<Button type="submit" className="flex items-center gap-2 mt-3">
+							<Button
+								type="submit"
+								className="flex items-center gap-2 mt-3 rounded-lg"
+							>
 								<Plus className="text-xs" /> Create board
 							</Button>
 						</>
