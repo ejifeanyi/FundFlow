@@ -12,6 +12,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import ModalTrigger from './ModalTrigger';
 
 const Navbar = () => {
 	const { setTheme } = useTheme();
@@ -46,9 +47,8 @@ const Navbar = () => {
 				</div>
 
 				{/* todo: add onclick to button to create modal for adding new board*/}
-				<button className="bg-primary text-primary-foreground rounded-lg px-4 py-3">
-					Create board
-				</button>
+
+				<ModalTrigger />
 
 				{/* todo: add fuctionality to update profile pic */}
 				<Avatar>
