@@ -1,3 +1,12 @@
+import Navbar from '@/components/Navbar';
+
 export default function Home() {
-	return <div className="font-bold">Fund Flow</div>;
+	return (
+		<div>
+			{/* Navbar */}
+			<Navbar />
+
+			{/* Boards */}
+		</div>
+	);
 }
