@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -20,7 +21,7 @@ const Navbar = () => {
 			<p className="font-bold text-2xl">FundFlow</p>
 
 			{/* dark-mode, button & profile pic */}
-			<div>
+			<div className="flex items-center justify-end flex-grow space-x-4 sm:space-x-6">
 				<div>
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
@@ -44,9 +45,16 @@ const Navbar = () => {
 					</DropdownMenu>
 				</div>
 
+				{/* todo: add onclick to button to create modal for adding new board*/}
 				<button className="bg-primary text-primary-foreground rounded-lg px-4 py-3">
 					Create board
 				</button>
+
+				{/* todo: add fuctionality to update profile pic */}
+				<Avatar>
+					<AvatarImage src="https://github.com/shadcn.png" />
+					<AvatarFallback>CN</AvatarFallback>
+				</Avatar>
 			</div>
 		</div>
 	);
